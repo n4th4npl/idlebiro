@@ -1,0 +1,57 @@
+import { useState } from "react";
+import "./App.css";
+import ImageWidget from "./components/imageWidget";
+import Navbar from "./components/Navbar";
+
+function App() {
+  return (
+    <>
+    <Navbar />
+      <div className="flex flex-row">
+        <div className="w-1/2 py-4 px-[14rem]">
+          <h1 className="text-gray-800 text-start text-4xl font-light tracking-wide">
+            The Idle Biro
+          </h1>
+          < hr className="my-5"/>
+          <p className="text-[1.5rem] tracking-tight">
+            A unique, irreplaceable and unexpected bespoke piece
+            of art for a special person or occasion.
+            <br></br>
+            <br></br>
+            Crystallize a memory you
+            have with your loved one in a beautiful drawing full of sentiment.
+
+            <br></br>
+            <br></br>
+            The sentimental value of a gift is what makes it so significant. A
+            unique artwork is the perfect way to show them how much you care.
+          </p>
+        </div>
+        <div className="w-1/2 overflow-hidden">
+          <div className="scroll-container">
+            <ImageWidget
+            src="/src/assets/roald.png"
+            alt="Roald Dahl"
+            pieceName="Roald Dahl - Original [Unframed]"
+            collection="- BRITISH IDOLS COLLECTION"
+            size="A0 - 841x1189mm / 33.1” x 46.8"
+            pieceStyle="Biro on watercolour paper"
+            />
+            <img
+              src="/src/assets/amy.png"
+              alt="Amy"
+              style={{ width: "100%" }}
+            />
+            <img
+              src="/src/assets/fred.png"
+              alt="Fred"
+              style={{ width: "100%" }}
+            />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default App;
